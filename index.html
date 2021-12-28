@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assn-6|Set-A|Que-1</title>
+    <style>
+        body{
+            /* background-color: lightsteelblue; */
+            background-color: rgb(83, 91, 102);
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            min-width: 400px;
+            padding: 30px;
+        }
+
+        label {
+            font-size: 20px;
+            font-style: oblique;
+        }
+        h2{
+            font-size: 30px;
+        }
+
+        input {
+            height: 50px;
+            font-size: 29px;
+            text-align: center;
+        }
+        #Facto{
+            color: white;
+        }
+        .btn{
+            font-size: 23px;
+            padding: 17px 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="factNum">
+            <h1>Enter number to find factorial</h1>
+        </label>
+        <h2 id="Facto">000</h2>
+        <input type="number" value="0" name="factNum" id="givenNumber" min="1"/>
+
+        <button class="btn" onclick="solution()">Calculate</button>
+    </div>
+
+    <script>
+        function solution(){
+            let facto = document.getElementById("Facto");
+            let number = document.getElementById("givenNumber").value;
+            let f = number;
+            for (let i = 1; i < number; i++) {
+                f = f * i;
+            }
+            facto.innerText= `Factorial of ${number} is ${f}`;
+        }
+
+    </script>
+</body>
+
+</html>
